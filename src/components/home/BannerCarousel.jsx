@@ -88,7 +88,7 @@ const BannerCarousel = () => {
   const handleMouseLeave = () => setIsAutoPlaying(true);
 
   return (
-    <section 
+    <section
       className="relative w-full overflow-hidden"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -100,13 +100,12 @@ const BannerCarousel = () => {
           return (
             <div
               key={banner.id}
-              className={`absolute inset-0 transition-all duration-700 ease-in-out ${
-                index === currentSlide
+              className={`absolute inset-0 transition-all duration-700 ease-in-out ${index === currentSlide
                   ? 'opacity-100 translate-x-0'
                   : index < currentSlide
-                  ? 'opacity-0 -translate-x-full'
-                  : 'opacity-0 translate-x-full'
-              }`}
+                    ? 'opacity-0 -translate-x-full'
+                    : 'opacity-0 translate-x-full'
+                }`}
             >
               {/* Background Image with Overlay */}
               <div className="absolute inset-0">
@@ -150,7 +149,7 @@ const BannerCarousel = () => {
                   <Button
                     onClick={() => navigate(banner.link)}
                     size="lg"
-                    className="bg-white text-gray-900 hover:bg-gray-100 shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all font-bold"
+                    className="bg-white text-indigo-600 hover:bg-gray-100 shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all font-bold"
                   >
                     {banner.cta}
                     <ChevronRight className="ml-2" size={20} />
@@ -188,11 +187,10 @@ const BannerCarousel = () => {
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`transition-all duration-300 rounded-full ${
-              index === currentSlide
+            className={`transition-all duration-300 rounded-full ${index === currentSlide
                 ? 'bg-white w-12 h-3'
                 : 'bg-white/50 hover:bg-white/75 w-3 h-3'
-            }`}
+              }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
