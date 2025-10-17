@@ -25,7 +25,7 @@ const Sidebar = () => {
   };
 
   return (
-    <aside className="w-64 bg-gray-800 text-white min-h-screen">
+    <aside className="w-64 bg-gray-800 text-white h-[calc(100vh-4rem)] sticky top-16 overflow-y-auto">
       <div className="p-4">
         <h2 className="text-xl font-bold mb-6">Admin Panel</h2>
         <nav>
