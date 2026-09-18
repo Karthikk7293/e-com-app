@@ -1,16 +1,31 @@
-# React + Vite
+# E-commerce frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React e-commerce frontend with Redux Toolkit, product browsing, cart and order flows, authentication, and admin screens backed by REST APIs.
 
-Currently, two official plugins are available:
+[Website](https://e-com-app-ecru.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project scope
 
-## React Compiler
+This repository contains the frontend. Its account, catalog, cart, and order screens depend on a separately configured API. Copy `.env.example` to a local environment file and configure the API URL. See [QUICK_START.md](QUICK_START.md) and [API_MIGRATION_GUIDE.md](API_MIGRATION_GUIDE.md) for the existing integration notes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Run locally
 
-## Expanding the ESLint configuration
+Install Node.js and the package manager used below. Run each command block from the repository root; separate frontend/backend processes use separate terminals.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Root application:
+
+```sh
+npm install
+npm run dev
+```
+
+Other package scripts: `npm run build`, `npm run lint`.
+
+## Source guide
+
+- [src/App.jsx](src/App.jsx)
+- [index.html](index.html)
+- [src/components/common/Button.jsx](src/components/common/Button.jsx)
+- [src/components/common/Input.jsx](src/components/common/Input.jsx)
+- [src/components/common/Logo.jsx](src/components/common/Logo.jsx)
+- [src/components/common/Modal.jsx](src/components/common/Modal.jsx)
